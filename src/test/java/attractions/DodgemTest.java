@@ -9,13 +9,14 @@ import static org.junit.Assert.assertEquals;
 public class DodgemTest {
 
     Dodgems dodgems;
-    Visitor visitor;
+    Visitor visitor1;
+    Visitor visitor2;
 
     @Before
     public void setUp() throws Exception {
         dodgems = new Dodgems("Bumper Cars", 5);
-        Visitor visitor1 = new Visitor(25, 6.1, 50);
-        Visitor visitor2 = new Visitor(10, 4.10, 5);
+        visitor1 = new Visitor(25, 180, 50.50);
+        visitor2 = new Visitor(10, 120, 5.50);
     }
 
 
@@ -36,6 +37,9 @@ public class DodgemTest {
     @Test
     public void canGetDefaultPrice(){
         assertEquals(4.50, dodgems.defaultPrice(), 0.0);
-
+    }
+    @Test
+    public void canGetHalfDefaultPriceForKids(){
+        assertEquals(2.25, dodgems.priceFor(visitor2), 0.0);
     }
 }

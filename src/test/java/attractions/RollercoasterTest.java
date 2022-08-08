@@ -1,12 +1,13 @@
 package attractions;
 
+import behaviours.ITicketed;
 import org.junit.Before;
 import org.junit.Test;
 import people.Visitor;
 
 import static org.junit.Assert.assertEquals;
 
-public class RollercoasterTest {
+public class RollercoasterTest  {
 
     RollerCoaster rollerCoaster;
     Visitor visitor1;
@@ -34,11 +35,11 @@ public class RollercoasterTest {
         assertEquals(0, rollerCoaster.getVisitCount());
     }
     @Test
-    public void canGetDefaultPrice(){
+    public void defaultPrice(){
         assertEquals(8.40, rollerCoaster.defaultPrice(), 0.0);
     }
     @Test
-    public void canChargeDoubleForTallPeople(){
-        assertEquals(16.80, rollerCoaster.doubleFee(visitor1), 0.0);
+    public void priceFor(){
+        assertEquals(16.80, rollerCoaster.priceFor(visitor1), 0.0);
     }
 }

@@ -10,6 +10,7 @@ public class Visitor {
         this.age = age;
         this.height = height;
         this.money = money;
+
     }
 
     public int getAge() {
@@ -24,5 +25,7 @@ public class Visitor {
         return money;
     }
 
-   
+
+
+
 }

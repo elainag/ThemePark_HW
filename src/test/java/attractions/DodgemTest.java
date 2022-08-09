@@ -42,4 +42,9 @@ public class DodgemTest {
     public void canGetHalfDefaultPriceForKids(){
         assertEquals(2.25, dodgems.priceFor(visitor2), 0.0);
     }
+    @Test
+    public void canGetRating(){
+        assertEquals(5,dodgems.getRating());
+    }
+
 }
